@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define MAX_TEKLIF_VERENLER 100 // En fazla teklif verebilecek kişi sayısı
-#define URUN_ADI_UZUNLUK 50 // Bu makro, açık artırmadaki ürün adının maksimum uzunluğunu belirler. Yani, urun_adi dizisinin en fazla 50 karakter içerebileceğini belirtir.
+#define MAX_TEKLIF_VERENLER 100 // En fazla teklif verebilecek kisi sayisi
+#define URUN_ADI_UZUNLUK 50 // Bu makro, acik artirmadaki Ã¼rÃ¼n adinin maksimum uzunluÃ°unu belirler. Yani, urun_adi dizisinin en fazla 50 karakter iÃ§erebilecegini belirtir.
 
 struct AcikArtirmaOyunu {
     char urun_adi[URUN_ADI_UZUNLUK]; // urun adi olusturduk - tablo
@@ -12,15 +12,15 @@ struct AcikArtirmaOyunu {
 };
 
 void acikArtirmayiBaslat(struct AcikArtirmaOyunu *artirma) {
-    printf("%s icin acik artirma başladi, başlangic fiyati %.2f.\n", artirma->urun_adi, artirma->mevcut_fiyat);
+    printf("%s icin acik artirma baÃ¾ladi, baÃ¾langic fiyati %.2f.\n", artirma->urun_adi, artirma->mevcut_fiyat);
 
     while (1) {
         char teklif[20];
-        printf("Teklifinizi girin (Acik artirmayi sonlandırmak icin 'quit' yazin): ");
+        printf("Teklifinizi girin (Acik artirmayi sonlandÃ½rmak icin 'quit' yazin): ");
         scanf("%s", teklif);
 
         if (strcmp(teklif, "quit") == 0) {
-            printf("Acik artirma sona erdi. Başka teklif yok.\n");
+            printf("Acik artirma sona erdi. BaÃ¾ka teklif yok.\n");
             break;
         }
 
@@ -41,7 +41,7 @@ int teklifVer(struct AcikArtirmaOyunu *artirma, char *teklif) {
             printf("Teklif, mevcut fiyattan daha yuksek olmalidir.\n");
         }
     } else {
-        printf("Gecersiz teklif. Lutfen geçerli bir sayi girin.\n"); // dusuk fiyat verirse 
+        printf("Gecersiz teklif. Lutfen geÃ§erli bir sayi girin.\n"); // dusuk fiyat verirse 
     }
 
     return 0;
